@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- adding bootstrap css-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="/css/star.css">
+    <title>Priya Varshney</title>
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-warning" style="background-color: #3498db;">
+        <div class="container">
+            <a class="navbar-brand" href="/blogs" style="color: rgb(0, 0, 0);">Bloggers View</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/blogs" style="color: #000000;">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/blogs" style="color: #000000;">Blogs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/blogs/new" style="color: #000000;">New</a>
+                    </li>
+                    <!-- <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: #000000;">
+                            Link
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../furniture/working.ejs" style="color: #000000;">Actions</a></li>
+                            <li><a class="dropdown-item" href="../furniture/working.ejs" style="color: #000000;">Delete a product</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="../furniture/working.ejs" style="color: #000000;">About</a></li>
+                        </ul>
+                    </li> -->
+                </ul>
+                <div class="navbar-nav ml-auto">
+                    <%if(!currentUser){%>
+                      <a href="/login" class="btn btn-outline-light text-black">Login</a> 
+                    <%} else{%>
+                      <a href="#" class="nav-link text-capitalize text-black">Hello <%=currentUser.username%></i> 
+                      </a>
+                      <a href="/logout" class="btn btn-outline-light text-black">Logout</a>
+                    <%}%>
+                  </div>
+
+                <!-- <form class="d-flex" action="/login">
+                    <button class="btn btn-outline-light" style="color: #000000;" type="submit">Login</button>
+                </form> -->
+
+                <!-- <form class="d-flex">
+                    <input class="form-control me-2 border border-secondary" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light" style="color: #000000;" type="submit">Search</button>
+                </form> -->
+            </div>
+        </div>
+    </nav>
+</header>
+
+    <main class="container">
+        <%- body -%>     
+    </main>
+    <!-- adding bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>  
+    <script src="/js/script.js"></script>
+</body>
+</html>

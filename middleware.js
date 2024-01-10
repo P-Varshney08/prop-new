@@ -1,0 +1,32 @@
+const {productSchema, reviewSchema} = require('./schema');
+
+const validateProduct = (req,res,next)=>{
+    const {blogContent, authorName} = req.body;
+    const {error} = productSchema.validate({blogContent,authorName});
+    if(error){
+        const msg = error.details.map((err)=>err.message).join(',');
+        return res.render('error' , {err:msg});
+    }
+    next();
+}
+// const validateProduct = (req,res,next)=>{
+//     const {furnitureName, img, price} = req.body;
+//     const {error} = productSchema.validate({furnitureName,img,price});
+//     if(error){
+//         const msg = error.details.map((err)=>err.message).join(',');
+//         return res.render('error' , {err:msg});
+//     }
+//     next();
+// }
+
+const validateReview = (req,res,next)=>{
+    const {rating, comment} = req.body;
+    const {error} = reviewSchema.validate({rating,comment});
+    if(error){
+        const msg = error.details.map((err)=>err.message).join(',');
+        return res.render('error' , {err:msg});
+    }
+    next();
+}
+
+module.exports = {validateProduct ,validateReview} ;

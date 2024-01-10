@@ -1,0 +1,45 @@
+<% layout('layouts/boilerplate') %>
+<div class="row">
+    <div class="col-6 mx-auto">
+        <form action="/blogs" method="POST" class="needs-validation" novalidate>
+            <div class="mb-3">
+                <label for="blogContent" class="form-label">Name of Blog: </label>
+                <!-- <label for="furnitureName" class="form-label">Name: </label> -->
+                <!-- <label for="name" class="form-label">Name: </label> -->
+                <input type="text" class="form-control" name="blogContent" id="blogContent" placeholder="Name of Blog" required>
+                <!-- <input type="text" class="form-control" name="furnitureName" id="furnitureName" placeholder="Name of Furniture" required> -->
+                <!-- <input type="text" class="form-control" name="name" id="name" placeholder="Name of Furniture" required> -->
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                <div id="validationServer03Feedback" class="invalid-feedback">
+                    Please provide a valid Name.
+                </div>
+            </div>
+            <!-- <div class="mb-3">
+                <label for="imge" class="form-label">Image Url: </label>
+                <input type="text" class="form-control" name="img" id="imge" placeholder="Image URL of Furniture" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                <div id="validationServer03Feedback" class="invalid-feedback">
+                    Please provide a valid Image URL.
+                </div>
+            </div> -->
+            <div class="mb-3">
+                <label for="authorName" class="form-label">Author Name: </label>
+                <div class="input-group mb-3">
+                    <!-- <span class="input-group-text" id="basic-addon1">Rs. </span> -->
+                    <input class="form-control" type="text" name="authorName" id="authorName" step="any" placeholder="Author Name" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div id="validationServer03Feedback" class="invalid-feedback">
+                        Please provide a valid Author name.
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-sm btn-success px-4">Add Blog</button>
+        </form>
+    </div>
+</div>

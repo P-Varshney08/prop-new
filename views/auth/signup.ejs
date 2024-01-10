@@ -1,0 +1,95 @@
+<% layout('layouts/boilerplate') %>
+<div class="container mt-5">
+    <div class="card p-4">
+        <h1 class="mb-4">Signup page</h1>
+        <form action="/register" method="post">
+            <div class="mb-3 row">
+                <label for="mail" class="col-sm-3 col-form-label">Email</label>
+                <div class="col-sm-9">
+                    <input type="email" name="email" class="form-control" id="mail"> 
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="naam" class="col-sm-3 col-form-label">Username</label>
+                <div class="col-sm-9">
+                    <input type="text" name="username" class="form-control" id="naam"> 
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="pass" class="col-sm-3 col-form-label">Password</label>
+                <div class="col-sm-9">
+                    <input type="password" name="password" class="form-control" id="pass">
+                </div>
+            </div>
+            <!-- <div class="mb-3 row">
+                <label class="col-sm-3 col-form-label">Gender</label>
+                <div class="col-sm-9">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gender" id="Male" value="Male">
+                        <label class="form-check-label" for="Male">Male</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gender" id="Female" value="Female">
+                        <label class="form-check-label" for="Female">Female</label>
+                    </div>
+                </div>
+            </div> -->
+            <div class="mb-3 row">
+                <label class="col-sm-3 col-form-label">Want to Register as?</label>
+                <div class="col-sm-9">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gender" id="Male" value="Male">
+                        <label class="form-check-label" for="Male">Male</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gender" id="Female" value="Female">
+                        <label class="form-check-label" for="Female">Female</label>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="age" class="col-sm-3 col-form-label">Age</label>
+                <div class="col-sm-9">
+                    <input type="number" name="age" class="form-control" id="age"> 
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="AadharNumber" class="col-sm-3 col-form-label">Aadhar Number</label>
+                <div class="col-sm-9">
+                    <input type="number" name="AadharNumber" class="form-control" id="AadharNumber"> 
+                </div>
+            </div>
+            <!-- <div class="mb-3 row">
+                <label for="phone" class="col-sm-3 col-form-label">Phone Number</label>
+                <div class="col-sm-9">
+                    <input type="tel" name="phone" class="form-control" id="phone"> 
+                </div>
+            </div> -->
+            <div class="mb-3 row">
+                <!-- <label class="col-sm-3 col-form-label">Address</label> -->
+                <div class="col-sm-9">
+                    <label for="address" class="form-label"> Address </label>
+                    <textarea class="form-control"  name="address" id="address" rows="5" placeholder="Address" required></textarea>
+                </div>
+            </div>
+            <!-- <div class="mb-3 row">
+                <label class="col-sm-3 col-form-label">Favorite Color</label>
+                <div class="col-sm-9">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="fav_color" id="red" value="Red">
+                        <label class="form-check-label" for="red">Red</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="fav_color" id="blue" value="Blue">
+                        <label class="form-check-label" for="blue">Blue</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="fav_color" id="yellow" value="Yellow">
+                        <label class="form-check-label" for="yellow">Yellow</label>
+                    </div>
+                </div>
+            </div> -->
+            <button type="submit" class="btn btn-primary">Signup</button>
+        </form>
+    </div>
+</div>
