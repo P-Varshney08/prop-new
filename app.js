@@ -12,9 +12,13 @@ const authRoutes = require("./routes/authRoutes");
 const passport = require('passport');
 const LocalStrategy = require('passport-local');
 const User =  require('./models/User');
+require('dotenv').config();
+const PORT = process.env.PORT;
+const MONGO_URI = process.env.MONGO_URI;
+
 
 mongoose.set('strictQuery', true);
-mongoose.connect('mongodb+srv://priyavarshney081003:6JeCf8dilMtUfTs6@cluster0.drka5j8.mongodb.net/test?retryWrites=true&w=majority') //returns a promise
+mongoose.connect(MONGO_URI) //returns a promise
 .then(()=>{console.log("DB connected")})
 .catch((err)=>{console.log(err)})
 
@@ -53,7 +57,6 @@ app.use(productRoutes);
 app.use(reviewRoutes);
 app.use(authRoutes);
 
-const port = 8080;
-app.listen(port,()=>{
-    console.log(`server connected at port : ${port}`);
+app.listen(PORT,()=>{
+    console.log(`server connected at port : ${PORT}`);
 })
